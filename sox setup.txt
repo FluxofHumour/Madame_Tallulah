@@ -1,0 +1,34 @@
+On RPI:
+sudo apt-get install sox libsox-fmt-all
+usage: play [filename]
+
+
+On Mac:
+
+1 | Install Homebrew:
+
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
+
+ruby -v
+(No need to do 2 if ruby version is 2.3 or higher)
+
+2 | Install/Upgrade Ruby:
+
+brew install rbenv ruby-build
+
+# Add rbenv to bash so that it loads every time you open a terminal
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+source ~/.bash_profile
+
+# Install Ruby
+rbenv install 2.4.2
+rbenv global 2.4.2
+ruby -v
+
+
+
+
+3 | Install sox:
+brew install sox
